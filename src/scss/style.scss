@@ -350,25 +350,7 @@ body {
 }
 
 
-@media (max-width: 320px) { 
-    .block {
-        
-    }
-    .aside { 
-        &__content {
-           padding: 10px 0;  
-        }
-      
-        &__form-input {
-            width: 200px;
-           
-            &_short {
-                width: 90px;
-                
-            }
-        }
-    }
-}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) { 
     .block {
@@ -393,8 +375,7 @@ body {
             border-color: $asideColor3;
         }
         &__content {
-        //    padding: 30px 60px;
-           
+           padding: 0; 
         }
         &__header {
             font-size: 18px;
