@@ -220,8 +220,6 @@ body {
             border: 1px solid #d3d3d3;
           
         }
-       
-
         &_short-man.aside__btn_active,
         &_short-man:hover {
             color: $bgColor;
@@ -231,8 +229,7 @@ body {
         &_short-woman:hover {
             color: $bgColor;
             background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
-        }
-       
+        } 
     }
     &__icon {
         width: 80px;
@@ -352,4 +349,106 @@ body {
     }
 }
 
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) { 
+    .block {
+        &__nav {
+            display: none;
+        }
+    }
+    .aside {
+        background: $bgColor;
+        border-top: 9px solid $asideColor;
+        &_purple {
+            border-color: $asideColor;
+        }
+        &_orange {
+            border-color: $asideColor2;
+        }
+        &_blue {
+            border-color: $asideColor3;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__result-text {
+            font-size: 28px;
+            text-align: center;
+        }
+    //    &__icon {
+    //         top: -500px;
+    //         height: 40px;
+    //         width: 40px;
+    //         border-width: 4px;
+    //         background-size: 80% 60%;
+    //    }
+    }
+}
 
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {
+    .block {
+        flex-direction: column;
+        &__photo {
+            min-height: 480px;
+            &_purple {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(58, 4, 31, 0.35) 85%), url(../images/photo.png) no-repeat;
+                background-size: cover;
+            }
+            &_orange {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(252, 137, 80, 0.35) 85%), url(../images/photo.png) no-repeat;
+                background-size: cover;
+            }
+            &_blue {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(29, 167, 192, 0.35) 85%), url(../images/photo.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        &__result-text {
+            font-size: 31px;
+        }
+    }
+    
+    .aside {
+        padding: 80px 12px;
+        &__content {
+            width: 100%;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+        &__header,
+        &__start-header {
+            text-align: center;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__start-block,
+        &__variats-block,
+        &__form-block  {
+            @include center;
+            flex-direction: column;
+        }
+        &__icon {
+            top: 15px;
+            left: 45%;
+        }
+        &__variats-block {
+            margin-top: 40px;
+        }
+        &__variant {
+            max-width: 384px;
+        }
+       
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+
+}
