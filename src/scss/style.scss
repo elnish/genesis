@@ -352,8 +352,12 @@ body {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) { 
     .block {
+        padding: 0;
         &__nav {
             display: none;
+        }
+        &__result-text {
+            font-size: 14px;
         }
     }
     .aside {
@@ -369,19 +373,55 @@ body {
             border-color: $asideColor3;
         }
         &__content {
-            width: 100%;
+           padding: 30px 60px;
+           
         }
-        &__result-text {
-            font-size: 28px;
-            text-align: center;
+        &__header {
+            font-size: 18px;
         }
-    //    &__icon {
-    //         top: -500px;
-    //         height: 40px;
-    //         width: 40px;
-    //         border-width: 4px;
-    //         background-size: 80% 60%;
-    //    }
+        &__text,
+        &__variant {
+            font-size: 16px;
+        }
+        &__start-header {
+            font-size: 22px;
+        }
+        &__btn {
+            font-size: 23px;
+            width: 236px;
+            height: 47px;
+            &_orange,
+            &_blue {
+                font-size: 16px;
+            }
+        }
+        &__icon {
+            margin-top: -120px;
+            margin-left: -150px;
+            height: 40px;
+            width: 40px;
+            border-width: 4px;
+            background-size: 18px 15px;
+        }
+        &__form-label {
+            font-size: 11px;
+            font-weight: 400;
+        }
+        &__form-input {
+            width: 267px;
+            height: 47px;
+            font-size: 11px;
+            &_short {
+                width: 130px;
+                height: 48px;
+                font-size: 14px;
+                margin-right: 8px;
+            }
+        }
+        &__form-text {
+            max-width: 230px;
+            font-size: 8px;
+        }
     }
 }
 
@@ -405,27 +445,22 @@ body {
             }
         }
         &__result-text {
-            font-size: 31px;
+            font-size: 28px;
+            padding: 10px 50px;
+            font-weight: 400;
+            text-align: center;
+        }
+        &__nav-link {
+            font-size: 10px;
+            padding: 10px;
         }
     }
     
     .aside {
-        padding: 80px 12px;
+        padding: 80px 0 0 0;
         &__content {
             width: 100%;
             min-width: 480px;
-            margin: 0 auto;
-        }
-        &__header,
-        &__start-header {
-            text-align: center;
-        }
-        &__text {
-            text-align: center;
-        }
-        &__start-block,
-        &__variats-block,
-        &__form-block  {
             @include center;
             flex-direction: column;
         }
@@ -433,11 +468,63 @@ body {
             top: 15px;
             left: 45%;
         }
-        &__variats-block {
-            margin-top: 40px;
+        &__header {
+            font-size: 24px;
+            text-align: center;
+        }
+        &__text,
+        &__variant {
+            font-size: 18px;
+            width: 235px;
+            text-align: center;
         }
         &__variant {
-            max-width: 384px;
+            width: 350px;
+            height: 70px;
+        }
+        &__start-block {
+            margin-top: 50px;
+        }
+        &__start-header {
+            font-size: 26px;
+            text-align: center;
+        }
+        &__btn {
+            font-size: 28px;
+            width: 400px;
+            height: 80px;
+            border-radius: 15px;
+            &_orange,
+            &_blue {
+                font-size: 26px;
+                max-width: 350px;
+            }
+        }
+        &__form-label {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        &__form-input {
+            width: 350px;
+            height: 60px;
+            border-radius: 10px;
+            font-size: 16px;
+            &_short {
+                width: 170px;
+                padding-left: 40px;
+                background-size: 18px 22px;
+               
+            }
+            &_man.aside__form-input_active,
+            &_woman.aside__form-input_active,
+            &_man:hover,
+            &_woman:hover {
+                background-size: 18px 22px;
+            }
+        }
+        &__form-text {
+            max-width: 340px;
+            font-size: 12px;
         }
        
     }
