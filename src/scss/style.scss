@@ -349,6 +349,62 @@ body {
     }
 }
 
+
+@media (max-width: 320px) { 
+    .aside {
+        background: $bgColor;
+        border-top: 9px solid $asideColor;
+        &_purple {
+            border-color: $asideColor;
+        }
+        &_orange {
+            border-color: $asideColor2;
+        }
+        &_blue {
+            border-color: $asideColor3;
+        }
+        &__content {
+           padding: 30px 10px;
+           
+        }
+        &__btn {
+            
+            max-width: 200px;
+            height: 47px;
+            &_orange,
+            &_blue {
+                font-size: 16px;
+            }
+        }
+        &__icon {
+            margin-top: -120px;
+            margin-left: -150px;
+            height: 40px;
+            width: 40px;
+            border-width: 4px;
+            background-size: 18px 15px;
+        }
+        &__form-label {
+            font-size: 11px;
+            font-weight: 400;
+        }
+        &__form-input {
+            width: 267px;
+            height: 47px;
+            font-size: 11px;
+            &_short {
+                width: 130px;
+                height: 48px;
+                font-size: 14px;
+                margin-right: 8px;
+            }
+        }
+        &__form-text {
+            max-width: 230px;
+            font-size: 8px;
+        }
+    }
+}
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) { 
     .block {
@@ -530,12 +586,10 @@ body {
     }
 }
 
-// Medium devices (tablets, less than 992px)
 @media (max-width: 991px) {
 
 }
 
-// Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
 
 }
