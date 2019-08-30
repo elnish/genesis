@@ -1,0 +1,355 @@
+$navTextColor: rgb(59, 59, 59);
+$asideColor: rgb(252, 80, 149);
+$asideColor2: rgb(252, 137, 80);
+$asideColor3: rgb(29, 167, 192);
+$bgColor: rgb(255, 255, 255);
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.block {
+    display: flex;
+    &__photo {
+        flex-grow: 1;
+        min-height: 100vh;
+        display: flex;
+        position: relative;
+        &_purple {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(58, 4, 31, 0.35) 85%), url(../images/photo.png) no-repeat;
+            background-size: cover;
+        }
+        &_orange {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(252, 137, 80, 0.35) 85%), url(../images/photo.png) no-repeat;
+            background-size: cover;
+        }
+        &_blue {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(29, 167, 192, 0.35) 85%), url(../images/photo.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    &__nav {
+        margin-top: auto;
+        position: relative;
+        width: 100%;
+    }
+    &__nav-list {
+        @include center;
+        flex-wrap: wrap;
+        background-color: rgba(255, 255, 255, 0.75);
+        padding: 10px 0;
+    }
+    &__nav-list {
+        padding: 5px 10px;
+    }
+    &__nav-link {
+        font-size: 12px;
+        font-weight: 700;
+        padding-left: 20px;
+        text-transform: uppercase;
+        &_purple-hover {
+            &:hover {
+                color: $asideColor;
+            }
+        } 
+        &_orange-hover {
+            &:hover {
+                color: $asideColor2;
+            }
+        } 
+        &_blue-hover {
+            &:hover {
+                color: $asideColor3;
+            }
+        } 
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 300;
+        &_orange {
+            background-color: rgba(252, 137, 80, .7);
+        } 
+    }
+    &__results {
+        color: $bgColor;
+        font-weight: 900;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        @include center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    &__result30 {
+        color: $bgColor;
+        font-size: 22vw;
+    }
+    &__result-text {
+        font-size: 40px;
+        padding: 20px 5%;
+    }
+}
+
+.aside {
+    padding: 223px 0 0 13px;
+    flex-basis: 845px;
+    &_purple {
+        background: $asideColor;
+        flex-basis: 480px;
+    }
+    &_orange {
+        background: $asideColor2;
+    }
+    &_blue {
+        background: $asideColor3;
+    }
+    &__content {
+        height: 100%;
+        position: relative;
+        background-color: $bgColor;
+        text-transform: uppercase;
+        font-family: inherit;
+        font-weight: 700;
+        letter-spacing: 0.24px;
+        padding: 100px 60px;
+    }
+    &__header {
+        font-size: 31px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &_purple {
+            color: $asideColor;
+        }
+        &_orange {
+            color: $asideColor2;
+        }
+        &_blue {
+            color: $asideColor3;
+        }
+    }
+    &__text {
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 13px;
+    }
+    &__start-block {
+        margin-top: 158px;
+    }
+    &__start-header {
+        color: $navTextColor;
+        font-size: 34px;
+        padding-bottom: 27px;
+    }
+    &__btn {
+        display: block;
+        width: 100%;
+        max-width: 285px;
+        height: 80px;
+        border: 0;
+        border-radius: 20px; 
+        color: $bgColor;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.36px;
+        @include center;
+        padding: 23px 10px;
+        outline: none;
+        cursor: pointer;
+        transition: opacity ease .5s;
+        &_hover {
+            &:hover {
+                opacity: .8;
+            }
+        }
+        &_purple {
+            background-color: $asideColor;
+            font-size: 38px;
+            max-width: 275px;
+        }
+        &_orange {
+            background-color: $asideColor2;
+        }
+        &_blue {
+            background-color: $bgColor;
+            border: 1px solid $asideColor3;
+            color: #aaa9a9;
+            &:hover {
+                background-color: $asideColor3;
+                color: $bgColor;
+                opacity: 1;
+            }
+        }
+        &_short-man, 
+        &_short-woman {
+            width: 50%;
+            color: #3b3b3b;
+            font-size: 24px;
+            text-transform: none;
+            margin-right: 15px;
+            padding-left: 45px;
+            border: 1px solid #d3d3d3;
+          
+        }
+       
+
+        &_short-man.aside__btn_active,
+        &_short-man:hover {
+            color: $bgColor;
+            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+        }
+        &_short-woman.aside__btn_active,
+        &_short-woman:hover {
+            color: $bgColor;
+            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+        }
+       
+    }
+    &__icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 9px solid;
+        position: absolute;
+        top: 80px;
+        left: -45px;
+        z-index: 500;
+        &_purple {
+            border-color: $asideColor;
+            background: $bgColor url(../images/hart.png) no-repeat center;
+        }
+        &_orange {
+            border-color: $asideColor2;
+            background: $bgColor url(../images/hart2.png) no-repeat center;
+        }
+        &_blue {
+            border-color: $asideColor3;
+            background: $bgColor url(../images/hart3.png) no-repeat center;
+        }
+    }
+    &__variats-block {
+        margin-top: 40px;
+    }
+    &__variant {
+        @include center;
+        width: 384px;
+        height: 80px;
+        border-radius: 10px;
+        border: 1px solid #d3d3d3;
+        background-color: $bgColor;
+        color: $navTextColor;
+        font-size: 26px;
+        letter-spacing: 0.15px;
+        margin-bottom: 17px;
+        transition: opacity ease .5s;
+        &_active {
+            background: $asideColor2;
+            color: $bgColor;
+        }
+        &_hover {
+            &:hover {
+                background: $asideColor2;
+                color: $bgColor;
+                opacity: .8;
+            }
+        }
+    }
+    &__form-block {
+        margin-top: 23px;
+    }
+    &__form {
+        max-width: 455px;
+        width: 100%;
+    }
+    &__input-box {
+        display: flex;
+    }
+    &__form-label {
+        display: block;
+        margin: 13px 0 4px 0;
+        text-transform: none;
+        color: #3b3b3b;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.09px;
+    }
+    &__form-input {
+        width: 100%;
+        max-width: 456px;
+        height: 80px;
+        padding: 0 15px;
+        border-radius: 10px;
+        border: 1px solid #d3d3d3;
+        background-color: $bgColor;
+        outline: none;
+        color: $navTextColor;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.09px;
+        &_short {
+            width: 50%;
+            color: #3b3b3b;
+            font-size: 24px;
+            margin-right: 15px;
+            padding-left: 55px;
+        }
+        &_man {
+            background: url(../images/m.png) no-repeat 20px 50%;
+        }
+        &_woman {
+            background: url(../images/w.png) no-repeat 20px 50%;
+        }
+        &_man.aside__form-input_active,
+        &_man:hover {
+            color: $bgColor;
+            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+        }
+        &_woman.aside__form-input_active,
+        &_woman:hover {
+            color: $bgColor;
+            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+        }
+    }
+    &__form-chackbox {
+        margin-top: 20px;
+    }
+    &__form-text {
+        display: block;
+        margin: -20px 0 14px 20px;
+        color: rgba(0, 0, 0, .8);
+        font-size: 13px;
+        letter-spacing: 0.16px;
+    }
+}
+
+
