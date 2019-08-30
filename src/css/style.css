@@ -267,6 +267,14 @@ body {
     font-size: 13px;
     letter-spacing: 0.16px; }
 
+@media (max-width: 320px) {
+  .aside__content {
+    padding: 10px 0; }
+  .aside__form-input {
+    width: 200px; }
+    .aside__form-input_short {
+      width: 90px; } }
+
 @media (max-width: 575px) {
   .block {
     padding: 0; }
@@ -283,8 +291,6 @@ body {
       border-color: #fc8950; }
     .aside_blue {
       border-color: #1da7c0; }
-    .aside__content {
-      padding: 30px 60px; }
     .aside__header {
       font-size: 18px; }
     .aside__text, .aside__variant {
