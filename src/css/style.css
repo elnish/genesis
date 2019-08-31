@@ -16,6 +16,12 @@ body {
   font-size: 14px;
   font-weight: 400; }
 
+.disable {
+  display: none; }
+
+.hidden {
+  visibility: hidden; }
+
 .block {
   display: flex; }
   .block__photo {
@@ -368,18 +374,27 @@ body {
       padding: 0;
       min-width: 230px; }
     .aside__header {
-      font-size: 18px; }
-    .aside__text, .aside__variant {
+      font-size: 18px;
+      max-width: 320px;
+      text-align: left; }
+    .aside__text {
+      width: 235px;
+      font-size: 16px;
+      text-align: left; }
+    .aside__variant {
       font-size: 16px; }
     .aside__variant {
-      max-width: 215px; }
+      width: 214px;
+      height: 49px; }
     .aside__start-header {
-      font-size: 22px; }
+      font-size: 22px;
+      text-align: left; }
     .aside__btn {
       font-size: 23px;
-      width: 215px;
+      width: 236px;
       height: 47px; }
       .aside__btn_orange, .aside__btn_blue {
+        width: 172px;
         font-size: 16px;
         padding: 10px; }
     .aside__icon {
@@ -393,11 +408,11 @@ body {
       font-size: 11px;
       font-weight: 400; }
     .aside__form-input {
-      width: 230px;
+      width: 268px;
       height: 47px;
       font-size: 11px; }
       .aside__form-input_short {
-        width: 110px;
+        width: 130px;
         height: 48px;
         font-size: 14px;
         margin-right: 8px; }

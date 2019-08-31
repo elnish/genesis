@@ -324,23 +324,33 @@
         }
         &__header {
             font-size: 18px;
+            max-width: 320px;
+            text-align: left;
+           
         }
-        &__text,
+        &__text {
+            width: 235px;
+            font-size: 16px;
+            text-align: left;
+        }
         &__variant {
             font-size: 16px;
         }
         &__variant {
-            max-width: 215px;
+            width: 214px;
+            height: 49px;
         }
         &__start-header {
             font-size: 22px;
+            text-align: left;
         }
         &__btn {
             font-size: 23px;
-            width: 215px;
+            width: 236px;
             height: 47px;
             &_orange,
             &_blue {
+                width: 172px;
                 font-size: 16px;
                 padding: 10px;
             }
@@ -358,11 +368,11 @@
             font-weight: 400;
         }
         &__form-input {
-            width: 230px;
+            width: 268px;
             height: 47px;
             font-size: 11px;
             &_short {
-                width: 110px;
+                width: 130px;
                 height: 48px;
                 font-size: 14px;
                 margin-right: 8px;

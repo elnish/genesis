@@ -37,16 +37,16 @@
                    
                     <div class="aside__start-block">
                         <h1 class="aside__start-header">Lorem Ipsum?</h1>
-                        <a href="#" class="aside__btn aside__btn_hover aside__btn_purple">Начать</a>
+                        <a href="#second" class="aside__btn aside__btn_hover aside__btn_purple">Начать</a>
                     </div>
                 </div>
             </aside>
         </div>
         <!-- END FIRST SCREEN -->
         <!-- SECOND SCREEN -->
-        <div class="container__block block">
+        <div class="container__block block" id="second">
             <section class="block__photo block__photo_orange">
-                <div class="block__overlay block__overlay_orange">
+                <div class="block__overlay block__overlay_orange disable">
                     <div class="block__results">
                         <p class="block__result30">30%</p>
                         <p class="block__result-text">людей обращают внимание на <span class="block__result-letter">Б</span></p>
@@ -70,19 +70,19 @@
                     <div class="aside__icon aside__icon_orange"></div>
                     <h2 class="aside__header aside__header_orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a urna sit amet</h2>
                     <div class="aside__variats-block">
-                        <a href="#" class="aside__variant aside__variant_hover">Вариант А</a>
-                        <a href="#" class="aside__variant aside__variant_hover aside__variant_active">Вариант Б</a>
-                        <a href="#" class="aside__variant aside__variant_hover">Вариант В</a>
+                        <a  class="aside__variant aside__variant_hover">Вариант А</a>
+                        <a  class="aside__variant aside__variant_hover">Вариант Б</a>
+                        <a  class="aside__variant aside__variant_hover">Вариант В</a>
                     </div>
-                    <div class="aside__start-block">
-                        <a href="#" class="aside__btn aside__btn_hover aside__btn_orange">Продолжить</a>
+                    <div class="aside__start-block hidden">
+                        <a href="#third" class="aside__btn aside__btn_hover aside__btn_orange">Продолжить</a>
                     </div>
                 </div>
             </aside>
         </div>
         <!-- END SECOND SCREEN -->
         <!-- THIRD SCREEN -->
-        <div class="container__block block">
+        <div class="container__block block" id="third">
             <section class="block__photo block__photo_blue">
                 <div class="block__nav">
                     <ul class="block__nav-list">
@@ -105,7 +105,7 @@
                         <form action="#" class="aside__form">
                             <label for="gender" class="aside__form-label">Я ищу:</label>
                             <div class="aside__input-box">
-                                <input class="aside__form-input aside__form-input_short aside__form-input_man aside__form-input_active" type="button" id="gender" name="gender" value="Вариант 1">
+                                <input class="aside__form-input aside__form-input_short aside__form-input_man" type="button" id="gender" name="gender" value="Вариант 1">
                                 <input class="aside__form-input aside__form-input_short aside__form-input_woman" type="button" id="gender" name="gender" value="Вариант 2">
                             </div> 
                             <label for="name" class="aside__form-label">Ваше имя:</label>
@@ -116,7 +116,7 @@
                             <input class="aside__form-input" type="text" id="password" name="password"><br/>
                             <input class="aside__form-chackbox" type="checkbox" name="checkbox">
                             <label class="aside__form-text" for="checkbox">Регистрируясь, вы подтверждаете, что вам уже исполнилось 18 лет и вы ознакомились с условиями пользования сайтом.</label>
-                            <input class="aside__btn aside__btn_hover aside__btn_blue" type="submit" value="Продолжить">
+                            <input class="aside__btn aside__btn_hover aside__btn_blue" type="submit" value="Продолжить" disabled>
                         </form>
                     </div>
                 </div>
@@ -126,6 +126,6 @@
       
     </div>
 
-    
+    <script src="./src/scripts/index.js"></script>
 </body>
 </html>
