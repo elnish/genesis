@@ -375,7 +375,7 @@ body {
       min-width: 230px; }
     .aside__header {
       font-size: 18px;
-      max-width: 320px;
+      width: 230px;
       text-align: left; }
     .aside__text {
       width: 235px;
