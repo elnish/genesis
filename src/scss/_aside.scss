@@ -64,8 +64,8 @@
         @include center;
         padding: 23px 10px;
         outline: none;
-        cursor: pointer;
         transition: opacity ease .5s;
+        cursor: pointer;
         &_hover {
             &:hover {
                 opacity: .8;
@@ -84,6 +84,7 @@
             border: 1px solid $asideColor3;
             color: #aaa9a9;
             &:hover {
+                cursor: pointer;
                 background-color: $asideColor3;
                 color: $bgColor;
                 opacity: 1;
@@ -147,6 +148,7 @@
         font-size: 26px;
         letter-spacing: 0.15px;
         margin-bottom: 17px;
+        cursor: pointer;
         transition: opacity ease .5s;
         &_active {
             background: $asideColor2;
@@ -199,6 +201,7 @@
             font-size: 24px;
             margin-right: 15px;
             padding-left: 55px;
+            cursor: pointer;
         }
         &_man {
             background: url(../images/m.png) no-repeat 20px 50%;
@@ -219,6 +222,7 @@
     }
     &__form-chackbox {
         margin-top: 20px;
+        cursor: pointer;
     }
     &__form-text {
         display: block;

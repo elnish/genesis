@@ -179,8 +179,8 @@ body {
     align-items: center;
     padding: 23px 10px;
     outline: none;
-    cursor: pointer;
-    transition: opacity ease .5s; }
+    transition: opacity ease .5s;
+    cursor: pointer; }
     .aside__btn_hover:hover {
       opacity: .8; }
     .aside__btn_purple {
@@ -194,6 +194,7 @@ body {
       border: 1px solid #1da7c0;
       color: #aaa9a9; }
       .aside__btn_blue:hover {
+        cursor: pointer;
         background-color: #1da7c0;
         color: white;
         opacity: 1; }
@@ -244,6 +245,7 @@ body {
     font-size: 26px;
     letter-spacing: 0.15px;
     margin-bottom: 17px;
+    cursor: pointer;
     transition: opacity ease .5s; }
     .aside__variant_active {
       background: #fc8950;
@@ -286,7 +288,8 @@ body {
       color: #3b3b3b;
       font-size: 24px;
       margin-right: 15px;
-      padding-left: 55px; }
+      padding-left: 55px;
+      cursor: pointer; }
     .aside__form-input_man {
       background: url(../images/m.png) no-repeat 20px 50%; }
     .aside__form-input_woman {
@@ -298,7 +301,8 @@ body {
       color: white;
       background: #1da7c0 url(../images/ma.png) no-repeat 20px 50%; }
   .aside__form-chackbox {
-    margin-top: 20px; }
+    margin-top: 20px;
+    cursor: pointer; }
   .aside__form-text {
     display: block;
     margin: -20px 0 14px 20px;
