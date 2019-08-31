@@ -22,6 +22,10 @@ body {
 .hidden {
   visibility: hidden; }
 
+.error {
+  border-color: #ff0000;
+  color: #ff0000; }
+
 .block {
   display: flex; }
   .block__photo {
@@ -190,14 +194,14 @@ body {
     .aside__btn_orange {
       background-color: #fc8950; }
     .aside__btn_blue {
-      background-color: white;
-      border: 1px solid #1da7c0;
-      color: #aaa9a9; }
-      .aside__btn_blue:hover {
-        cursor: pointer;
-        background-color: #1da7c0;
-        color: white;
-        opacity: 1; }
+      cursor: pointer;
+      background-color: #1da7c0;
+      color: white;
+      opacity: 1; }
+      .aside__btn_blue:disabled {
+        background-color: white;
+        border: 1px solid #1da7c0;
+        color: #aaa9a9; }
     .aside__btn_short-man, .aside__btn_short-woman {
       width: 50%;
       color: #3b3b3b;
@@ -283,6 +287,12 @@ body {
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 0.09px; }
+    .aside__form-input_error {
+      color: #ff0000;
+      border-color: #ff0000; }
+    .aside__form-input_success {
+      color: green;
+      border-color: green; }
     .aside__form-input_short {
       width: 50%;
       color: #3b3b3b;

@@ -13,7 +13,7 @@
     <div class="container">
        
          <!-- FIRST SCREEN -->
-         <div class="container__block block">
+         <div class="container__block block" data-slide-item>
             <section class="block__photo block__photo_purple">
                 <div class="block__nav">
                     <ul class="block__nav-list">
@@ -37,14 +37,14 @@
                    
                     <div class="aside__start-block">
                         <h1 class="aside__start-header">Lorem Ipsum?</h1>
-                        <a href="#second" class="aside__btn aside__btn_hover aside__btn_purple">Начать</a>
+                        <a href="#second" class="aside__btn aside__btn_hover aside__btn_purple" data-next>Начать</a>
                     </div>
                 </div>
             </aside>
         </div>
         <!-- END FIRST SCREEN -->
         <!-- SECOND SCREEN -->
-        <div class="container__block block" id="second">
+        <div class="container__block block" id="second" data-slide-item>
             <section class="block__photo block__photo_orange">
                 <div class="block__overlay block__overlay_orange disable">
                     <div class="block__results">
@@ -70,19 +70,19 @@
                     <div class="aside__icon aside__icon_orange"></div>
                     <h2 class="aside__header aside__header_orange">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a urna sit amet</h2>
                     <div class="aside__variats-block">
-                        <a  class="aside__variant aside__variant_hover">Вариант А</a>
-                        <a  class="aside__variant aside__variant_hover">Вариант Б</a>
-                        <a  class="aside__variant aside__variant_hover">Вариант В</a>
+                        <a  class="aside__variant aside__variant_hover" data-variant="a">Вариант А</a>
+                        <a  class="aside__variant aside__variant_hover" data-variant="b">Вариант Б</a>
+                        <a  class="aside__variant aside__variant_hover" data-variant="c">Вариант В</a>
                     </div>
-                    <div class="aside__start-block hidden">
-                        <a href="#third" class="aside__btn aside__btn_hover aside__btn_orange">Продолжить</a>
+                    <div class="aside__start-block">
+                        <a href="#third" class="aside__btn aside__btn_hover aside__btn_orange hidden" data-next>Продолжить</a>
                     </div>
                 </div>
             </aside>
         </div>
         <!-- END SECOND SCREEN -->
         <!-- THIRD SCREEN -->
-        <div class="container__block block" id="third">
+        <div class="container__block block" id="third" data-slide-item> 
             <section class="block__photo block__photo_blue">
                 <div class="block__nav">
                     <ul class="block__nav-list">
@@ -102,21 +102,21 @@
                     <div class="aside__icon aside__icon_blue"></div>
                     <h2 class="aside__header aside__header_blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </h2>
                     <div class="aside__form-block">
-                        <form action="#" class="aside__form">
+                        <form action="#" method="POST" class="aside__form" data-form>
                             <label for="gender" class="aside__form-label">Я ищу:</label>
                             <div class="aside__input-box">
-                                <input class="aside__form-input aside__form-input_short aside__form-input_man" type="button" id="gender" name="gender" value="Вариант 1">
-                                <input class="aside__form-input aside__form-input_short aside__form-input_woman" type="button" id="gender" name="gender" value="Вариант 2">
+                                <input class="aside__form-input aside__form-input_short aside__form-input_man" type="button"  name="gender" value="Вариант 1">
+                                <input class="aside__form-input aside__form-input_short aside__form-input_woman" type="button" name="gender" value="Вариант 2">
                             </div> 
                             <label for="name" class="aside__form-label">Ваше имя:</label>
-                            <input class="aside__form-input" type="text" id="name" name="name"><br/>
+                            <input class="aside__form-input" type="text" id="name" name="name" data-name><br/>
                             <label for="email" class="aside__form-label">Email:</label>
-                            <input class="aside__form-input" type="email" id="email" name="email"><br/>
+                            <input class="aside__form-input" type="text" id="email" name="email" data-email><br/>
                             <label for="password" class="aside__form-label">Придумайте пароль:</label>
-                            <input class="aside__form-input" type="text" id="password" name="password"><br/>
-                            <input class="aside__form-chackbox" type="checkbox" name="checkbox">
+                            <input class="aside__form-input" type="text" id="password" name="password" data-password><br/>
+                            <input class="aside__form-chackbox" type="checkbox" name="checkbox" data-checkbox>
                             <label class="aside__form-text" for="checkbox">Регистрируясь, вы подтверждаете, что вам уже исполнилось 18 лет и вы ознакомились с условиями пользования сайтом.</label>
-                            <input class="aside__btn aside__btn_hover aside__btn_blue" type="submit" value="Продолжить" disabled>
+                            <input class="aside__btn aside__btn_hover aside__btn_blue" type="submit" value="Продолжить" disabled data-submit-btn>
                         </form>
                     </div>
                 </div>

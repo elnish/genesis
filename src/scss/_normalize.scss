@@ -28,3 +28,7 @@ body {
     visibility: hidden;
 }
 
+.error {
+    border-color: $error;
+    color: $error;
+}

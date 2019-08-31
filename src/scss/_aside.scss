@@ -80,14 +80,14 @@
             background-color: $asideColor2;
         }
         &_blue {
-            background-color: $bgColor;
-            border: 1px solid $asideColor3;
-            color: #aaa9a9;
-            &:hover {
-                cursor: pointer;
-                background-color: $asideColor3;
-                color: $bgColor;
-                opacity: 1;
+            cursor: pointer;
+            background-color: $asideColor3;
+            color: $bgColor;
+            opacity: 1;
+            &:disabled {
+                background-color: $bgColor;
+                border: 1px solid $asideColor3;
+                color: #aaa9a9;
             }
         }
         &_short-man, 
@@ -195,6 +195,14 @@
         font-size: 18px;
         font-weight: 300;
         letter-spacing: 0.09px;
+        &_error {
+            color: $error;
+            border-color: $error;
+        }
+        &_success {
+            color: green;
+            border-color: green;
+        }
         &_short {
             width: 50%;
             color: #3b3b3b;
