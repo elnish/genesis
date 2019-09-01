@@ -109,7 +109,7 @@
         &_short-woman.aside__btn_active,
         &_short-woman:hover {
             color: $bgColor;
-            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+            background: $asideColor3 url(../images/ww.svg) no-repeat 20px 50%;
         } 
     }
     &__icon {
@@ -196,13 +196,13 @@
         font-weight: 300;
         letter-spacing: 0.09px;
         &_error {
-            color: $error;
             border-color: $error;
+            &::placeholder {
+                color: $error;
+            }
         }
-        &_success {
-            color: green;
-            border-color: green;
-        }
+       
+      
         &_short {
             width: 50%;
             color: #3b3b3b;

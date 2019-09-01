@@ -1,16 +1,69 @@
+;(function () {
 //Variants
-let variants = document.querySelectorAll('[data-variant]');
+let variants = document.querySelectorAll('.aside__variant');
+let genders = document.querySelectorAll('.aside__form-input_short');  
 let overlay = document.querySelector('.block__overlay');
 let orangeBtn = document.querySelector('.aside__btn_orange');
-for(let i = 0; i < variants.length; i++) {
-    variants[i].addEventListener('click', function(){
-        if(this.classList.contains('aside__variant_active') == false) {
-           this.classList.add('aside__variant_active')
-           overlay.classList.remove('disable');
-           orangeBtn.classList.remove('hidden');
-        } 
+let result = document.querySelector('.block__result30');
+let resultSimbol = document.querySelector('.block__result-letter');
+
+function selections(elements, activeClass, callback) {
+    elements.forEach((elem, index) => {
+        elem.dataset.variant = index;
+        elem.addEventListener('click', event => {
+            let element = event.currentTarget;
+            let variant = element.dataset.variant;
+            elements.forEach(btn => btn.classList.remove(activeClass));
+            element.classList.add(activeClass);
+            callback(variant);
+        })
     })
 }
+
+function resultInner(prosent, letter) {
+    result.innerHTML = prosent;
+    resultSimbol.innerHTML = letter;
+}
+
+selections(variants, 'aside__variant_active', variant => {
+    console.log(variant);
+    overlay.classList.remove('disable');
+    orangeBtn.classList.remove('hidden');
+ 
+    if (variant == 0) {
+        resultInner("10%", "A");
+        
+    } else if (variant == 1) {
+        resultInner("30%", "Б");
+    } else {
+        resultInner("67%", "В");
+    }
+    
+});
+
+
+
+
+
+// Slider
+let slides = document.querySelectorAll('[data-slide-item]');
+let next = document.querySelectorAll('[data-next]');
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides() {
+    showSlides(slideIndex += 1);
+}
+
+function showSlides(n) {
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    slides.forEach(slider => slider.style.display = "none");
+    slides[slideIndex-1].style.display = 'flex'; 
+}
+
+next.forEach(elt => elt.addEventListener('click', plusSlides, false));
+
+
 
 
 //form checkbox
@@ -27,85 +80,52 @@ checkbox.addEventListener('click', function () {
 })
 
 
-// Slider
-// let slides = document.querySelectorAll('[data-slide-item]');
-// let slideIndex = 1;
-// showSlides(slideIndex);
-// function plusSlides() {
-//   showSlides(slideIndex += 1);
-// }
-// function minusSlides() {
-//     showSlides(slideIndex -= 1);
-// }
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-// function showSlides(n) {
-//   let i;
-//   if (n > slides.length) {slideIndex = 1} 
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none"; 
-//   }
-//   slides[slideIndex-1].style.display = 'flex'; 
-// }
-// document.querySelector('[data-next]').addEventListener('click', plusSlides, false);
-
-//Validate
-
+//Validation
 let form = document.querySelector('[data-form]');
 let name = document.querySelector('[data-name]');
 let email = document.querySelector('[data-email]');
 let password = document.querySelector('[data-password]');
 let btn = document.querySelector('[data-submit-btn]');
-let re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-let re2 = /[A-Z]/;
+let emailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+let passwordRegex = /.{8,}/;
 
 function errorMessage(el, message) {
-    el.value = message;
+    el.placeholder = message;
     el.classList.add('aside__form-input_error');
 }
 
-function successMessage(el) {
-    el.classList.add('aside__form-input_success');
-}
 
-function onfocus(el) {
-    el.addEventListener('focus', function() {
-        el.value = '';
-        el.classList.remove('aside__form-input_error');
-    })
-}
+selections(genders, 'aside__form-input_active', variant => console.log(variant));
 
 function validate(event) {
     event.preventDefault();
+    //name
     if (name.value.length == 0) {
         errorMessage(name, 'Введите свое имя');
-        onfocus(name);  
+        // onfocus(name);  
     } else {
         successMessage(name);
     }
-
+    //email
     if (email.value.length == 0) {
         errorMessage(email, 'Введите свой email');
-        onfocus(email);
+        // onfocus(email);
         
-    } else if (!re.test(email.value)) {
+    } else if (!emailRegex.test(email.value)) {
         errorMessage(email, 'Неверный формат email');
-        onfocus(email);
-    } else {
-        successMessage(email);
-    }
-
+        // onfocus(email);
+    } 
+    //password
     if (password.value.length == 0) {
         errorMessage(password, 'Придумайте новый пароль');
-        onfocus(password);
-    } else if (!re2.test(password.value)) {
-        errorMessage(password, 'Должна быть большая буква');
-        onfocus(password);
+        // onfocus(password);
+    } else if (!passwordRegex.test(password.value)) {
+        errorMessage(password, 'Паль должен содержать не меньше 8 знаков');
+        // onfocus(password);
     } else {
         successMessage(password);
     }
 }
 
 form.addEventListener('submit', validate);
+})();

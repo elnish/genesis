@@ -13,8 +13,8 @@
     <div class="container">
        
          <!-- FIRST SCREEN -->
-         <div class="container__block block" data-slide-item>
-            <section class="block__photo block__photo_purple">
+         <div class="container__block block fade" data-slide-item>
+            <div class="block__photo block__photo_purple">
                 <div class="block__nav">
                     <ul class="block__nav-list">
                         <li class="block__nav-item"><a class="block__nav-link block__nav-link_purple-hover" href="#">название1</a></li>
@@ -27,7 +27,7 @@
                         <li class="block__nav-item"><a class="block__nav-link block__nav-link_purple-hover" href="#">длинное название8</a></li>
                     </ul>
                 </div>
-            </section>
+            </div>
             <aside class="block__aside aside aside_purple">
                 <div class="aside__content">
                     <div class="aside__icon aside__icon_purple"></div>
@@ -44,8 +44,8 @@
         </div>
         <!-- END FIRST SCREEN -->
         <!-- SECOND SCREEN -->
-        <div class="container__block block" id="second" data-slide-item>
-            <section class="block__photo block__photo_orange">
+        <div class="container__block block fade" id="second" data-slide-item>
+            <div class="block__photo block__photo_orange">
                 <div class="block__overlay block__overlay_orange disable">
                     <div class="block__results">
                         <p class="block__result30">30%</p>
@@ -64,7 +64,7 @@
                         <li class="block__nav-item"><a class="block__nav-link block__nav-link_orange-hover" href="#">длинное название8</a></li>
                     </ul>
                 </div>
-            </section>
+            </div>
             <aside class="block__aside aside aside_orange">
                 <div class="aside__content">
                     <div class="aside__icon aside__icon_orange"></div>
@@ -82,8 +82,8 @@
         </div>
         <!-- END SECOND SCREEN -->
         <!-- THIRD SCREEN -->
-        <div class="container__block block" id="third" data-slide-item> 
-            <section class="block__photo block__photo_blue">
+        <div class="container__block block fade" id="third" data-slide-item> 
+            <div class="block__photo block__photo_blue">
                 <div class="block__nav">
                     <ul class="block__nav-list">
                         <li class="block__nav-item"><a class="block__nav-link block__nav-link_blue-hover" href="#">название1</a></li>
@@ -96,14 +96,14 @@
                         <li class="block__nav-item"><a class="block__nav-link block__nav-link_blue-hover" href="#">длинное название8</a></li>
                     </ul>
                 </div>
-            </section>
+            </div>
             <aside class="block__aside aside aside_blue">
                 <div class="aside__content">
                     <div class="aside__icon aside__icon_blue"></div>
                     <h2 class="aside__header aside__header_blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </h2>
                     <div class="aside__form-block">
                         <form action="#" method="POST" class="aside__form" data-form>
-                            <label for="gender" class="aside__form-label">Я ищу:</label>
+                            <p class="aside__form-label">Я ищу:</p>
                             <div class="aside__input-box">
                                 <input class="aside__form-input aside__form-input_short aside__form-input_man" type="button"  name="gender" value="Вариант 1">
                                 <input class="aside__form-input aside__form-input_short aside__form-input_woman" type="button" name="gender" value="Вариант 2">
@@ -113,10 +113,10 @@
                             <label for="email" class="aside__form-label">Email:</label>
                             <input class="aside__form-input" type="text" id="email" name="email" data-email><br/>
                             <label for="password" class="aside__form-label">Придумайте пароль:</label>
-                            <input class="aside__form-input" type="text" id="password" name="password" data-password><br/>
+                            <input class="aside__form-input" type="password" id="password" name="password" data-password><br/>
                             <input class="aside__form-chackbox" type="checkbox" name="checkbox" data-checkbox>
                             <label class="aside__form-text" for="checkbox">Регистрируясь, вы подтверждаете, что вам уже исполнилось 18 лет и вы ознакомились с условиями пользования сайтом.</label>
-                            <input class="aside__btn aside__btn_hover aside__btn_blue" type="submit" value="Продолжить" disabled data-submit-btn>
+                            <input class="aside__btn aside__btn_hover aside__btn_blue" id="checkbox" type="submit" value="Продолжить" disabled data-submit-btn>
                         </form>
                     </div>
                 </div>

@@ -28,7 +28,20 @@ body {
     visibility: hidden;
 }
 
-.error {
-    border-color: $error;
-    color: $error;
+
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: .8s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
