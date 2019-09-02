@@ -88,7 +88,7 @@
     .block {
         flex-direction: column;
         &__photo {
-            max-height: 480px;
+            max-height: 280px;
             &_purple {
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(58, 4, 31, 0.35) 85%), url(../images/photo.png) no-repeat;
                 background-size: cover;
