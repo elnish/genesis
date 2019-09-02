@@ -63,14 +63,32 @@
 
     //Validation
     let form = document.querySelector('[data-form]');
-    let name = document.querySelector('[data-name]');
-    let email = document.querySelector('[data-email]');
-    let password = document.querySelector('[data-password]');
+    let name = document.querySelector('#name');
+    let email = document.querySelector('#email');
+    let password = document.querySelector('#password');
+    let inputs = document.querySelectorAll('[data-input]');
+    let checkbox = document.querySelector('#checkbox');
+    let submitBtn = document.querySelector('[data-submit-btn]');
     let emailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     let passwordRegex = /.{8,}/;
 
-    let checkbox = document.querySelector('[data-checkbox]');
-    let submitBtn = document.querySelector('[data-submit-btn]');
+
+    function submitDisabled() {
+        checkbox.checked = false;
+        submitBtn.setAttribute('disabled', true);
+    }
+
+    function errorMessage(el, message) {
+        el.placeholder = message;
+        el.value = '';
+        el.classList.add('aside__form-input_error');
+        submitDisabled();
+    }
+
+    function clear(el) {
+        el.classList.remove('aside__form-input_error');
+    }
+
 
     checkbox.addEventListener('click', function () {
         if (checkbox.checked) {
@@ -79,59 +97,66 @@
         else {
             submitBtn.setAttribute('disabled', true);
         } 
-    })
-
-
-    function errorMessage(el, message) {
-        el.placeholder = message;
-        el.value = '';
-        el.classList.add('aside__form-input_error');
-        checkbox.checked = false;
-        submitBtn.setAttribute('disabled', true);
-    }
-
-    function clear(el) {
-        el.classList.remove('aside__form-input_error');
-    }
-
-
+    });
+    
     selections(genders, 'aside__form-input_active', variant => console.log (variant));
 
     function validate(event) {
         event.preventDefault();
-
+        let result = 0;
         //gender
         if (!genders[0].classList.contains('aside__form-input_active') && !genders[1].classList.contains('aside__form-input_active')) {
             genders.forEach(gender => gender.classList.add('aside__form-input_error')); 
+            result = 1;
         } else {
             genders.forEach(gender => gender.classList.remove('aside__form-input_error'));
+            result = 0;
         }
 
         // name
         if (name.value.length == 0) {
             errorMessage(name, 'Введите свое имя'); 
+            result = 1;
         } else {
             clear(name);
+            result = 0;
         }
 
         // email
         if (email.value.length == 0) {
             errorMessage(email, 'Введите свой email');
+            result = 1;
         } else if (!emailRegex.test(email.value)) {
             errorMessage(email, 'Неверный формат email');
+            result = 1;
         } else {
             clear(email);
+            result = 0;
         }
 
         //password
         if (password.value.length == 0) {
             errorMessage(password, 'Придумайте новый пароль');
+            result = 1;
         } else if (!passwordRegex.test(password.value)) {
             errorMessage(password, 'Паль должен содержать не меньше 8 знаков');
+            result = 1;
         } else {
             clear(password);
+            result = 0;
         }
+        if (result == 0) {
+            inputs.forEach(input => {
+                input.value = '';
+                input.placeholder = '';
+            });
+            genders.forEach(gender => gender.classList.remove('aside__form-input_active'));
+            checkbox.checked = false;
+            submitBtn.setAttribute('disabled', true);
+        }
+        
     }
 
     form.addEventListener('submit', validate);
+   
 })();
