@@ -230,7 +230,7 @@ body {
       background: #1da7c0 url(../images/ma.png) no-repeat 20px 50%; }
     .aside__btn_short-woman.aside__btn_active, .aside__btn_short-woman:hover {
       color: white;
-      background: #1da7c0 url(../images/ww.svg) no-repeat 20px 50%; }
+      background: #1da7c0 url(../images/ma.png) no-repeat 20px 50%; }
   .aside__icon {
     width: 80px;
     height: 80px;
@@ -342,6 +342,8 @@ body {
     letter-spacing: 0.16px; }
 
 @media (max-width: 767px) {
+  .block {
+    max-height: 680px; }
   .aside {
     padding: 80px 0 0 0; }
     .aside__content {
