@@ -130,7 +130,6 @@
             result = 4;
         } else {
             clear(email);
-          
         }
 
         //password
@@ -142,7 +141,6 @@
             result = 6;
         } else {
             clear(password);
-            
         }
         if (result == 0) {
             inputs.forEach(input => {
@@ -150,10 +148,8 @@
                 input.placeholder = '';
             });
             genders.forEach(gender => gender.classList.remove('aside__form-input_active'));
-            checkbox.checked = false;
-            submitBtn.setAttribute('disabled', true);
+            submitDisabled();
         }
-        
     }
 
     form.addEventListener('submit', validate);
