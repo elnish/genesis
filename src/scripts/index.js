@@ -149,6 +149,7 @@
             });
             genders.forEach(gender => gender.classList.remove('aside__form-input_active'));
             submitDisabled();
+            alert("Thank you!");
         }
     }
 
