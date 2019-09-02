@@ -342,7 +342,7 @@ body {
       background: #1da7c0 url(../images/man-icon-white.png) no-repeat 20px 50%; }
     .aside__form-input_woman.aside__form-input_active, .aside__form-input_woman:hover {
       color: white;
-      background: #1da7c0 url(../images/wa.svg) no-repeat 100% 100%; }
+      background: #1da7c0 url(../images/man-icon-white.png) no-repeat 20px 50%; }
   .aside__form-chackbox {
     margin-top: 20px;
     cursor: pointer; }
