@@ -37,7 +37,6 @@
         } else {
             resultInner("67%", "В");
         }
-        
     });
 
 
@@ -107,7 +106,7 @@
         //gender
         if (!genders[0].classList.contains('aside__form-input_active') && !genders[1].classList.contains('aside__form-input_active')) {
             genders.forEach(gender => gender.classList.add('aside__form-input_error')); 
-            result = 1;
+            result += 1;
         } else {
             genders.forEach(gender => gender.classList.remove('aside__form-input_error'));
             result = 0;
@@ -116,7 +115,7 @@
         // name
         if (name.value.length == 0) {
             errorMessage(name, 'Введите свое имя'); 
-            result = 1;
+            result += 1;
         } else {
             clear(name);
             result = 0;
@@ -125,10 +124,10 @@
         // email
         if (email.value.length == 0) {
             errorMessage(email, 'Введите свой email');
-            result = 1;
+            result += 1;
         } else if (!emailRegex.test(email.value)) {
             errorMessage(email, 'Неверный формат email');
-            result = 1;
+            result += 1;
         } else {
             clear(email);
             result = 0;
@@ -137,10 +136,10 @@
         //password
         if (password.value.length == 0) {
             errorMessage(password, 'Придумайте новый пароль');
-            result = 1;
+            result += 1;
         } else if (!passwordRegex.test(password.value)) {
             errorMessage(password, 'Паль должен содержать не меньше 8 знаков');
-            result = 1;
+            result += 1;
         } else {
             clear(password);
             result = 0;
