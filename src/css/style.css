@@ -65,15 +65,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.75);
-    padding: 10px 0; }
+    padding: 15px 0; }
   .block__nav-list {
-    padding: 5px 10px; }
+    padding: 10px 10%; }
   .block__nav-link {
     font-size: 12px;
     font-weight: 700;
-    padding-left: 20px;
+    line-height: 2em;
     text-transform: uppercase; }
     .block__nav-link_purple-hover:hover {
       color: #fc5095; }
@@ -129,8 +130,9 @@ body {
       font-weight: 400;
       text-align: center; }
     .block__nav-link {
-      font-size: 10px;
-      padding: 10px; } }
+      font-size: 10px; }
+    .block__nav-list {
+      padding: 5px 80px; } }
 
 @media (max-width: 575px) {
   .block {
@@ -332,15 +334,16 @@ body {
       padding-left: 55px;
       cursor: pointer; }
     .aside__form-input_man {
-      background: url(../images/m.png) no-repeat 20px 50%; }
+      background: url(../images/man-icon.png) no-repeat 20px 50%; }
     .aside__form-input_woman {
-      background: url(../images/w.png) no-repeat 20px 50%; }
+      background: url(../images/woman-icon.png) no-repeat 20px 50%; }
     .aside__form-input_man.aside__form-input_active, .aside__form-input_man:hover {
       color: white;
-      background: #1da7c0 url(../images/ma.png) no-repeat 20px 50%; }
+      background: #1da7c0 url(../images/man-icon-white.png) no-repeat 20px 50%; }
     .aside__form-input_woman.aside__form-input_active, .aside__form-input_woman:hover {
       color: white;
-      background: #1da7c0 url(../images/ma.png) no-repeat 20px 50%; }
+      background: #1da7c0 url(../images/man-icon-white.png) no-repeat 20px 50%;
+      fill: #fff; }
   .aside__form-chackbox {
     margin-top: 20px;
     cursor: pointer; }

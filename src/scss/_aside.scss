@@ -210,20 +210,21 @@
             cursor: pointer;
         }
         &_man {
-            background: url(../images/m.png) no-repeat 20px 50%;
+            background: url(../images/man-icon.png) no-repeat 20px 50%;
         }
         &_woman {
-            background: url(../images/w.png) no-repeat 20px 50%;
+            background: url(../images/woman-icon.png) no-repeat 20px 50%;
         }
         &_man.aside__form-input_active,
         &_man:hover {
             color: $bgColor;
-            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+            background: $asideColor3 url(../images/man-icon-white.png) no-repeat 20px 50%;
         }
         &_woman.aside__form-input_active,
         &_woman:hover {
             color: $bgColor;
-            background: $asideColor3 url(../images/ma.png) no-repeat 20px 50%;
+            background: $asideColor3 url(../images/man-icon-white.png) no-repeat 20px 50%;
+            fill: #fff;
         }
     }
     &__form-chackbox {
