@@ -118,10 +118,8 @@
 
 @media (max-width: 575px) {    
     .block {
-        
-        
-        max-height: 680px;
-        padding: 0;
+        max-height: 650px;
+        padding: 0 0 40px 0;
         &__photo {
             min-height: 280px; 
             border-top: 40px solid;
