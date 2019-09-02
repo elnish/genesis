@@ -3,9 +3,9 @@
     let variants = document.querySelectorAll('.aside__variant');
     let genders = document.querySelectorAll('.aside__form-input_short');  
     let overlay = document.querySelector('.block__overlay');
-    let orangeBtn = document.querySelector('.aside__btn_orange');
+    let resultBtn = document.querySelector('.aside__btn_orange');
     let result = document.querySelector('.block__result30');
-    let resultSimbol = document.querySelector('.block__result-letter');
+    let resultSymbol = document.querySelector('.block__result-letter');
 
     function selections(elements, activeClass, callback) {
         elements.forEach((elem, index) => {
@@ -22,13 +22,13 @@
 
     function resultInner(prosent, letter) {
         result.innerHTML = prosent;
-        resultSimbol.innerHTML = letter;
+        resultSymbol.innerHTML = letter;
     }
 
     selections(variants, 'aside__variant_active', variant => {
         console.log(variant);
         overlay.classList.remove('disable');
-        orangeBtn.classList.remove('hidden');
+        resultBtn.classList.remove('hidden');
     
         if (variant == 0) {
             resultInner("10%", "A");   
