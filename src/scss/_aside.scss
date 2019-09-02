@@ -240,9 +240,6 @@
 }
 
 @media (max-width: 767px) {
-    .block {
-        max-height: 680px;
-    }
     .aside {
         padding: 80px 0 0 0;
         &__content {
@@ -321,7 +318,7 @@
 @media (max-width: 575px) { 
     .aside {
         background: $bgColor;
-        border-top: 9px solid $asideColor;
+        border-top: 9px solid;
         &_purple {
             border-color: $asideColor;
         }

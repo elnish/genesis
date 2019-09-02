@@ -88,7 +88,7 @@
     .block {
         flex-direction: column;
         &__photo {
-            min-height: 480px;
+            max-height: 480px;
             &_purple {
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(58, 4, 31, 0.35) 85%), url(../images/photo.png) no-repeat;
                 background-size: cover;
@@ -98,6 +98,7 @@
                 background-size: cover;
             }
             &_blue {
+                max-height: 140px;
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(29, 167, 192, 0.35) 85%), url(../images/photo.png) no-repeat;
                 background-size: cover;
             }
@@ -115,11 +116,25 @@
     }
 }
 
-@media (max-width: 575px) { 
+@media (max-width: 575px) {    
     .block {
+        
+        
+        max-height: 680px;
         padding: 0;
         &__photo {
             min-height: 280px; 
+            border-top: 40px solid;
+            &_purple {
+                border-color: $asideColor;
+            }
+            &_orange {
+                border-color: $asideColor2;
+            }
+            &_blue {
+                border-color: $asideColor3;
+                min-height: 180px; 
+            }
         }
         &__nav {
             display: none;
