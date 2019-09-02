@@ -112,7 +112,7 @@ body {
   .block {
     flex-direction: column; }
     .block__photo {
-      max-height: 280px; }
+      min-height: 280px; }
       .block__photo_purple {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(58, 4, 31, 0.35) 85%), url(../images/photo.png) no-repeat;
         background-size: cover; }
@@ -120,7 +120,7 @@ body {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(252, 137, 80, 0.35) 85%), url(../images/photo.png) no-repeat;
         background-size: cover; }
       .block__photo_blue {
-        max-height: 140px;
+        min-height: 140px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(29, 167, 192, 0.35) 85%), url(../images/photo.png) no-repeat;
         background-size: cover; }
     .block__result-text {
@@ -134,6 +134,7 @@ body {
 
 @media (max-width: 575px) {
   .block {
+    max-height: 750px;
     padding: 0 0 40px 0; }
     .block__photo {
       min-height: 280px;
